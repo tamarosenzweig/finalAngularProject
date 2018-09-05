@@ -1,6 +1,6 @@
 <div *ngIf="!isFromCart">
     <div class="preview" *ngIf="product">
-        <!-- <img src="{{product['volumeInfo'].imageLinks}}"> -->
+       <img src="{{product['volumeInfo'].imageLinks}}"> 
         <h3>{{product["volumeInfo"].title}}</h3>
         <h4>{{product["volumeInfo"].subtitle}}</h4>
     </div>
@@ -9,7 +9,7 @@
 
 <div *ngIf="isFromCart">
     <div class="preview" *ngIf="product">
-        <!-- <img src="{{product['volumeInfo'].imageLinks}}"> -->
+        <img src="{{product['volumeInfo'].imageLinks}}">
         <h3>{{product.title}}</h3>
         <h4>{{product.subtitle}}</h4>
 
