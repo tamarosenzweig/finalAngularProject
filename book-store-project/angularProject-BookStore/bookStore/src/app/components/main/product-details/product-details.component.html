@@ -1,19 +1,3 @@
-<!-- <div *ngIf="product">
-  <h5>{{product.title}}</h5>
-  <p>{{product.pageCount}}</p>
-  <p>{{product.subtitle}}</p>
-  <p>{{product.authors}}</p>
-  <p>{{product.publishedDate}}</p>
-  <img src="{{product.imageLinks}}">
-  <p>{{product.language}}</p>
-
-</div>
-
-
-
- -->
-
-
 
 <div id="container">
   <div *ngIf="product" class="col-md-offset-3 col-md-6 row">
@@ -21,9 +5,6 @@
       <div class="imageContainer col-md-12">
         <img src="{{product.imageLinks}}">
       </div>
-      
-
-
     </div>
     <div class="scrollbar" id="style-2">
       <div id="details" class="col-md-12 force-overflow">
@@ -52,5 +33,4 @@
   <div *ngIf="goToLogin" name="goToLogin">
     <a routerLink="/bookStore/myAccount/login">go To Login</a>
   </div>
-
 </div>

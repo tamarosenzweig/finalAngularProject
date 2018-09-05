@@ -5,6 +5,5 @@
   </form>
   <div *ngIf="productsList" class="container">
     <app-product-preview *ngFor="let product of productsList" [product]="product" [isFromCart]="false" class="box"></app-product-preview>
-
   </div>
 </div>
