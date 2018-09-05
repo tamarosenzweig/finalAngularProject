@@ -1,13 +1,7 @@
 //---------------------- shared ----------------------
-
-//models
-
-
 //services
 export { ProductService } from './shared/services/product.service';
 export { UserService } from './shared/services/user.service';
-//shared-components
-
 //---------------------- components ----------------------
 export { AppComponent } from './app.component';
 //header

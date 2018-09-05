@@ -4,12 +4,6 @@ import { FormArray } from '@angular/forms';
 import { User } from '../../../../shared/models/User.model';
 import { UserService } from '../../../../import';
 import { Router, ActivatedRoute } from '@angular/router';
-// import {ValidateId}from ''
-// <!-- public firstfirstName: string,
-// public lasstfirstName: string,
-// public userfirstName: string,
-// public password: string,
-// public img:string -->
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -37,7 +31,6 @@ export class RegisterComponent implements OnInit {
       this.router.navigate(['bookStore/products']);
     }
   }
-
   get firstName() {
     return this.registerForm.get('firstName');
   }
@@ -50,7 +43,4 @@ export class RegisterComponent implements OnInit {
   get userName() {
     return this.registerForm.get("userName");
   }
-
-
-
 }

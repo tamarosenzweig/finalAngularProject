@@ -8,13 +8,11 @@ import { User } from '../models/User.model';
 })
 export class ProductService {
     searchParameter: string;
-    subject=new Subject();
+    subject = new Subject();
     myProductsCartList: any[];
     constructor(private httpClient: HttpClient) {
         this.searchParameter = 'a';
         this.myProductsCartList = [];
-       
-        // this.url = `https://www.googleapis.com/books/v1/volumes?q=${this.searchParameter}&maxResults=40&fields=items(saleInfo%2FlistPrice%2CvolumeInfo(authors%2Cdescription%2CimageLinks(smallThumbnail%2Cthumbnail)%2Clanguage%2CmainCategory%2CpageCount%2CpublishedDate%2Cpublisher%2Csubtitle%2Ctitle))`;
     }
     searchProduct(title: string) {
         console.log(title);
@@ -24,7 +22,7 @@ export class ProductService {
             this.searchParameter = title;
 
         return this.httpClient.get(`https://www.googleapis.com/books/v1/volumes?q="${this.searchParameter}"&maxResults=40&fields=items(saleInfo%2FlistPrice%2CvolumeInfo(authors%2Cdescription%2CimageLinks(smallThumbnail%2Cthumbnail)%2Clanguage%2CmainCategory%2CpageCount%2CpublishedDate%2Cpublisher%2Csubtitle%2Ctitle))`)
-        // return [volumeInfo:{title: "Venice", subtitle: "A Documentary History, 1450-1630", authors: Array(4), publisher: "University of Toronto Press", publishedDate: "2001", …}];
+
     }
 
     getProductsCartList() {
