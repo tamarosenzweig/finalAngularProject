@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   }
   onSubmit() {
     console.log("submit");
-    this.isExist = true;
+    this.isExist = false;
     if (this.loginForm.valid) {
       let res = this.userService.login(this.loginForm.get('userName').value, this.loginForm.get("password").value);
       res.subscribe(res => {
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['bookStore/products']);
         }
         else{
-          this.isExist = false;
+          this.isExist = true;
         }
       },
         err => {

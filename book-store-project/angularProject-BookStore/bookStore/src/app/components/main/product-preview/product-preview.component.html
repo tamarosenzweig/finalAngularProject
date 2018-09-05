@@ -1,18 +1,34 @@
-<div *ngIf="!isFromCart">
-    <div class="preview" *ngIf="product">
-       <img src="{{product['volumeInfo'].imageLinks}}"> 
-        <h3>{{product["volumeInfo"].title}}</h3>
-        <h4>{{product["volumeInfo"].subtitle}}</h4>
-    </div>
-    <button (click)="viewDetails()">View Details</button>
-</div>
 
-<div *ngIf="isFromCart">
-    <div class="preview" *ngIf="product">
-        <img src="{{product['volumeInfo'].imageLinks}}">
-        <h3>{{product.title}}</h3>
-        <h4>{{product.subtitle}}</h4>
-
+<div class="productContainer col-md-offset-1 col-md-10" *ngIf="!isFromCart">
+        <div class="content" *ngIf="product">
+            <div class="imageContainer col-md-6 ">
+                <img src="{{product['volumeInfo'].imageLinks}}">
+            </div>
+            <div class="scrollbar col-md-6" id="style-2">
+                <div class="force-overflow">
+                    <h3>{{product["volumeInfo"].title}}</h3>
+                    <h4 class="subtitle">{{product["volumeInfo"].subtitle}}</h4>
+                </div>
+            </div>
+            <div class="row">
+                <button (click)="viewDetails()" class="button col-md-offset-1 col-md-10 preview">View Details</button>
+            </div>
+        </div>
     </div>
-    <button (click)="removeBook()">remove book</button>
-</div>
+
+    <div class="productContainer col-md-offset-1 col-md-10" *ngIf="isFromCart">
+            <div class="content" *ngIf="product">
+                <div class="imageContainer col-md-6 ">
+                    <img src="{{product.imageLinks}}">
+                </div>
+                <div class="scrollbar col-md-6" id="style-2">
+                    <div class="force-overflow">
+                        <h3>{{product.title}}</h3>
+                        <h4 class="subtitle">{{product.subtitle}}</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <button (click)="removeBook()" class="button col-md-offset-1 col-md-10 preview">remove book</button>
+                </div>
+            </div>
+        </div>

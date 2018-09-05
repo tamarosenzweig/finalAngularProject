@@ -9,7 +9,7 @@ import { Store } from '../../shared/models/store.model';
 export class HomeComponent implements OnInit {
  myStore:Store;
   constructor() { 
-    this.myStore=new Store("my book store","","Jerusalem","king David",17);
+    this.myStore=new Store("my book store","./../../../assets/images/booksstore.png","Jerusalem","king David",17);
   }
 
   ngOnInit() {
