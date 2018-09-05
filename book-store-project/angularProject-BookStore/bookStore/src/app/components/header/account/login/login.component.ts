@@ -22,14 +22,13 @@ export class LoginComponent implements OnInit {
 
   }
   onSubmit() {
-    console.log("submit");
     this.isExist = false;
     if (this.loginForm.valid) {
-      let res = this.userService.login(this.loginForm.get('userName').value, this.loginForm.get("password").value);
+      let res = this.userService.login(this.loginForm.get('userName').value, this.loginForm.get('password').value);
       res.subscribe(res => {
         console.log(res);
         if (res) {
-          localStorage.setItem("user", JSON.stringify(res));
+          localStorage.setItem('user', JSON.stringify(res));
           this.router.navigate(['bookStore/products']);
         }
         else{
@@ -46,6 +45,6 @@ export class LoginComponent implements OnInit {
     return this.loginForm.get('userName');
   }
   get password() {
-    return this.loginForm.get("password");
+    return this.loginForm.get('password');
   }
 }

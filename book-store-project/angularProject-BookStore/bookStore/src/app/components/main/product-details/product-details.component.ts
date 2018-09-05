@@ -21,7 +21,7 @@ export class ProductDetailsComponent implements OnInit {
     this.myProductsCartList = this.productService.getProductsCartList();
     this.activate.params.forEach(prod => {
       this.productService.searchProduct(prod.stringProduct).subscribe(res => {
-        this.product = res["items"][0].volumeInfo
+        this.product = res['items'][0].volumeInfo
       });
     })
   }
@@ -33,7 +33,7 @@ export class ProductDetailsComponent implements OnInit {
     this.router.navigate(['bookStore/products']);
   }
   addToMyCart() {
-    if (JSON.parse(localStorage.getItem('user')).userName != "guest") {
+    if (JSON.parse(localStorage.getItem('user')).userName != 'guest') {
       this.productService.addProduct(this.product);
     }
     else {

@@ -21,7 +21,7 @@ export class ProductPreviewComponent implements OnInit {
   }
   viewDetails() {
     let stringProduct=JSON.stringify(this.product);
-    this.router.navigate(['/bookStore/products/productDetails',this.product["volumeInfo"].title]);
+    this.router.navigate(['/bookStore/products/productDetails',this.product['volumeInfo'].title]);
   }
   removeBook() {
    
