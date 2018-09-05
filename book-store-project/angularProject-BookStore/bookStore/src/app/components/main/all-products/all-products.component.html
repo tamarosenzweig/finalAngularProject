@@ -1,5 +1,6 @@
 <div class="wrapper">
   <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+      
     <input formControlName="search" placeholder="search" (keyup)="searchProducts()">
   </form>
   <div *ngIf="productsList" class="container">

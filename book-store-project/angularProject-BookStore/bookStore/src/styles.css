@@ -19,3 +19,9 @@
   .footer, .push {
     height: 155px; /* .push must be the same height as .footer */
   }
+button{
+  border-radius: 2px;
+  background-color: #df405a;
+  }
+  
+  

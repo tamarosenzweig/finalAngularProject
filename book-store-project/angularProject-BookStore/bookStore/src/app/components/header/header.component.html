@@ -4,7 +4,8 @@
     <div class=" clearfix">
       <h2 class="companyName">
         <div>
-          <img src="{{JSON.parse(localStorage.getItem('user')).img}}" />Hello {{JSON.parse(localStorage.getItem('user')).userName}}
+          <span class="glyphicon glyphicon-user" *ngIf="JSON.parse(localStorage.getItem('user')).userName=='guest'"></span>
+          <img src="{{JSON.parse(localStorage.getItem('user')).img}}" *ngIf="JSON.parse(localStorage.getItem('user')).userName!='guest'"/>Hello {{JSON.parse(localStorage.getItem('user')).userName}}
         </div>
       </h2>
       <nav class="mainNav clearfix">

@@ -11,8 +11,8 @@ export class UserService {
 
     user: User;
     guest: User;
-    userSubject = new Subject();
-
+    basicURL = "http://localhost:3500/api";
+    userList: User[];
     constructor(private httpClient: HttpClient) {
         this.guest = new User('', '', 'guest', '', 'src="favicon.ico"');
         if (!localStorage.getItem('user')) {
@@ -22,8 +22,7 @@ export class UserService {
         this.user = JSON.parse(localStorage.getItem('user'));
     }
 
-    basicURL = "http://localhost:3500/api";
-    userList: User[];
+   
     getAllUsers(setUserList: (res) => void): void {
         let url: string = this.basicURL + "/getList?fileName=user";
         this.httpClient.get<any[]>(url)

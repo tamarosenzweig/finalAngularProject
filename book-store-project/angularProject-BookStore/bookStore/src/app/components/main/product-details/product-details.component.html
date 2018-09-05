@@ -1,5 +1,4 @@
-
-<div *ngIf="product">
+<!-- <div *ngIf="product">
   <h5>{{product.title}}</h5>
   <p>{{product.pageCount}}</p>
   <p>{{product.subtitle}}</p>
@@ -7,12 +6,51 @@
   <p>{{product.publishedDate}}</p>
   <img src="{{product.imageLinks}}">
   <p>{{product.language}}</p>
-  <button (click)="addToMyCart()">Add To My Cart</button>
-  <button (click)="backToProductList()">Back to Product-list</button>
-</div>
-<div *ngIf="goToLogin" name="goToLogin">
-  <a routerLink="/bookStore/myAccount/login">go To Login</a>
+
 </div>
 
 
 
+ -->
+
+
+
+<div id="container">
+  <div *ngIf="product" class="col-md-offset-3 col-md-6 row">
+    <div class="col-md-5 right">
+      <div class="imageContainer col-md-12">
+        <img src="{{product.imageLinks}}">
+      </div>
+      
+
+
+    </div>
+    <div class="scrollbar" id="style-2">
+      <div id="details" class="col-md-12 force-overflow">
+        <dl>
+          <dt class="col-md-5">Title:</dt>
+          <dd class="col-md-7">{{product.title}}&nbsp;</dd>
+          <dt class="col-md-5">Subtitle:</dt>
+          <dd class="col-md-7">{{product.subtitle}}&nbsp;</dd>
+          <dt class="col-md-5">Authors:</dt>
+          <dd *ngFor="let author of product.authors;let i=index" [ngClass]="{'col-md-offset-5':i>0,'col-md-7':true}">{{author}}&nbsp;</dd>
+          <dd class="col-md-7" *ngIf="!product.authors||product.authors.length==0">&nbsp;</dd>
+          <dt class="col-md-5">Publisher:</dt>
+          <dd class="col-md-7">{{product.publisher}}&nbsp;</dd>
+          <dt class="col-md-5">PublishedDate:</dt>
+          <dd class="col-md-7">{{product.publishedDate| date : 'shortDate'}}&nbsp;</dd>
+          <dt class="col-md-5">Description:</dt>
+          <dd class="col-md-7">{{product.description}}&nbsp;</dd>
+          <dt class="col-md-5">Page Count:</dt>
+          <dd class="col-md-7">{{product.pageCount}}&nbsp;</dd>
+        </dl>
+      </div>
+    </div>
+    <button (click)="addToMyCart()" class="btn-outline-primary button col-md-offset-1 col-md-10">Add To My Cart</button>
+    <button (click)="backToProductList()" class="button col-md-offset-1 col-md-10">Back to Product-list</button>
+  </div>
+  <div *ngIf="goToLogin" name="goToLogin">
+    <a routerLink="/bookStore/myAccount/login">go To Login</a>
+  </div>
+
+</div>
