@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { User } from '../../shared/models/User.model';
-import { ProductService } from '../../shared/services/product.service';
-import { UserService } from '../../shared/services/user.service';
+import { User } from '../../../shared/models/User.model';
+import { ProductService } from '../../../import';
+import { UserService } from '../../../import';
 
 @Component({
   selector: 'app-product-details',

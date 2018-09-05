@@ -1,16 +1,22 @@
 import { Routes, RouterModule } from '@angular/router';
-import { AccountComponent } from './components/account/account.component';
-import { ProductsComponent } from './components/products/products.component';
-import { CartComponent } from './components/cart/cart.component';
 import { GuestGuard } from './shared/guest.guard';
-import { HomeComponent } from './components/home/home.component';
-import { MainComponent } from './components/main/main.component';
-import { LoginComponent } from './components/login/login.component';
-import { LogoutComponent } from './components/logout/logout.component';
-import { RegisterComponent } from './components/register/register.component';
-import { ProductDetailsComponent } from './components/product-details/product-details.component';
-import { AllProductsComponent } from './components/all-products/all-products.component';
 import { UserGuard } from './shared/user.guard';
+import {   AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    MainComponent,
+    ProductsComponent,
+    HomeComponent,
+    AccountComponent,
+    CartComponent,
+    ProductDetailsComponent,
+    LoginComponent,
+    RegisterComponent,
+    LogoutComponent,
+    ProductPreviewComponent,
+    AllProductsComponent,
+    UserService,
+    ProductService}from './import'
 const appRoutes: Routes = [
     {
         path: 'bookStore/home', component: HomeComponent

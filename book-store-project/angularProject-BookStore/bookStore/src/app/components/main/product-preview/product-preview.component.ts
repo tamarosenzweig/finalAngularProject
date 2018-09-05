@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProductService } from '../../shared/services/product.service';
+import { ProductService } from '../../../import';
 
 @Component({
   selector: 'app-product-preview',
