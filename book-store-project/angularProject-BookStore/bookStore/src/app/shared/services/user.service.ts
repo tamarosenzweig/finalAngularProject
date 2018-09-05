@@ -11,7 +11,7 @@ export class UserService {
 
     user: User;
     guest: User;
-    basicURL = "http://localhost:3500/api";
+    basicURL = "https://glacial-plains-94649.herokuapp.com";
     userList: User[];
     constructor(private httpClient: HttpClient) {
         this.guest = new User('', '', 'guest', '', 'src="favicon.ico"');
