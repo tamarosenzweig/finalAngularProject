@@ -1,0 +1,18 @@
+
+<div *ngIf="product">
+  <h5>{{product.title}}</h5>
+  <p>{{product.pageCount}}</p>
+  <p>{{product.subtitle}}</p>
+  <p>{{product.authors}}</p>
+  <p>{{product.publishedDate}}</p>
+  <!-- <p>{{product.imageLinks}}</p> -->
+  <p>{{product.language}}</p>
+  <button (click)="addToMyCart()">Add To My Cart</button>
+  <button (click)="backToProductList()">Back to Product-list</button>
+</div>
+<div *ngIf="goToLogin" name="goToLogin">
+  <a routerLink="/bookStore/myAccount/login">go To Login</a>
+</div>
+
+
+

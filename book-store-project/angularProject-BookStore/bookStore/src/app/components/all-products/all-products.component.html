@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <input formControlName="search" placeholder="search" (keyup)="searchProducts()">
+  </form>
+  <div *ngIf="productsList" class="container">
+    <app-product-preview *ngFor="let product of productsList" [product]="product" [isFromCart]="false" class="box"></app-product-preview>
+
+  </div>
+</div>

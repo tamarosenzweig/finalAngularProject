@@ -1,0 +1,19 @@
+
+  <header>
+    <div class="navWrapper" id="home">
+      <div class=" clearfix">
+        <nav class="mainNav clearfix">
+          <ul class="nav navbar-nav">
+            <li  *ngIf="JSON.parse(localStorage.getItem('user')).userName=='guest'" routerLinkActive="active"><a routerLink="/bookStore/myAccount/login"class="smoothScroll">Login</a></li>
+            <li  *ngIf="JSON.parse(localStorage.getItem('user')).userName=='guest'"routerLinkActive="active"><a routerLink="/bookStore/myAccount/register"class="smoothScroll">Register</a></li>
+            <li *ngIf="JSON.parse(localStorage.getItem('user')).userName!='guest'" routerLinkActive="active"><a (click)="logOut()"class="smoothScroll">LogOut</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="innerWrapper">
+        <router-outlet></router-outlet>
+      </div>
+    </section>
+  </header>

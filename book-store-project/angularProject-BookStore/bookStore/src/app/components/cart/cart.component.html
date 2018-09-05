@@ -1,0 +1,7 @@
+
+<div *ngIf="myProductsCartList">
+    <app-product-preview *ngFor="let product of myProductsCartList" [product]="product" [isFromCart]="true"></app-product-preview>
+  </div>
+  <div *ngIf="!myProductsCartList">
+     <h4>no books</h4>
+    </div>
